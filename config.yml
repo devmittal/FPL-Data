@@ -1,4 +1,4 @@
-table: team                                           # Specify 'team' or 'player'
+table: player                                           # Specify 'team' or 'player'
 
 team_table:                                             # Only used if table is 'team'
   mode: "against"                                       # Specify for (attacking stats) or against (defensive stats)
