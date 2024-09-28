@@ -1,0 +1,27 @@
+table: team                                           # Specify 'team' or 'player'
+
+team_table:                                             # Only used if table is 'team'
+  mode: "against"                                       # Specify for (attacking stats) or against (defensive stats)
+  team_list: []                                         # Optional team names to fetch. 
+  fixture_eval: False                                   # True if you want xG and xGp90 data for the next x fixtures
+  number_fixtures: 2                                    # Specify the number of fixtures for which you want data (default - 5)
+  scatter_plot: False                                    # Specify true or false if you want an output scatter plot
+  x_axis:                                               # Optional attribute for X axis (default: Per 90 Minutes_xG)
+  y_axis: ""                                            # Optional attribute for Y axis (default: Per 90 Minutes_xAG)
+  plot_file_name: "xG_xA_p90"                           # Scatter plot file name (default: Comparing Attributes for PL teams)
+  sort_by: "Per 90 Minutes_xG"                          # Optional attribute to specify how you want the table to be sorted (default: Per 90 Minutes_xG+xAG)
+  sort_by_order: False                                  # Optional sorting order - Ascending - True; Descending - False (default: False)
+  csv_file_name: "team_stats"                           # Specify csv file name where the data will be exported - (default: team_stats_<timestamp>)
+
+player_table:                                           # Only used if table is 'player'
+  min_minutes: 250                                      # Optional filter based on Minimum minutes played 
+  min_xGi: 0.50                                         # Optional filter for Minimum xGi
+  position: ""                                          # Optional filter to specify positiion - DF, MF, FW, GK
+  player_list: []                                       # Optional player names to filter
+  scatter_plot: True                                    # Specify true or false if you want an output scatter plot
+  x_axis:                                               # Optional attribute for X axis (default: Per 90 Minutes_xG)
+  y_axis: ""                                            # Optional attribute for Y axis (default: Per 90 Minutes_xAG)
+  plot_file_name: "Per 90 Minutes_xG"                   # Optional scatter plot file name (default: Comparing Attributes for PL Players)
+  sort_by: "Per 90 Minutes_xG+xAG"                      # Optional attribute to specify how you want the table to be sorted (default: Per 90 Minutes_xG+xAG)
+  sort_by_order: False                                  # Optional sorting order - Ascending - True; Descending - False (default: False)
+  csv_file_name: "player_stats"                         # Specify csv file name where the data will be exported - (default: player_stats_<timestamp>)

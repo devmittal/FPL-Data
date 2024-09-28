@@ -1,0 +1,6 @@
+__pycache__/
+build/
+csv_files/
+dist/
+main.spec
+plot_files/
